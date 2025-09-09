@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600&display=swap');
+@tailwind base;
+
+@mixin typeface($type, $size) {
+  font-family: var(--font-family-#{$type});
+  letter-spacing: normal;
+  font-size: var(--font-size-#{$size});
+}
+
+@layer base {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+  }
+
+  p {
+    @include typeface(primary, 5);
+    font-weight: 400;
+    line-height: 1.5;
+
+    @screen md {
+      @include typeface(primary, 6);
+      font-weight: 400;
+      line-height: 1.75;
+    }
+  }
+
+  h1,
+  .like-h1 {
+    @include typeface(header, 16);
+    font-weight: 700;
+    @screen md {
+      @include typeface(header, 18);
+      font-weight: 700;
+    }
+  }
+
+  h2,
+  .like-h2 {
+    @include typeface(header, 12);
+    font-weight: 700;
+    @screen md {
+      @include typeface(header, 14);
+      font-weight: 700;
+    }
+  }
+
+  h3,
+  .like-h3 {
+    @include typeface(header, 8);
+    font-weight: 400;
+
+    @screen md {
+      @include typeface(header, 10);
+      font-weight: 400;
+    }
+  }
+
+  h4,
+  .like-h4 {
+    @include typeface(primary, 8);
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @screen md {
+      @include typeface(primary, 9);
+      font-weight: 500;
+    }
+  }
+
+  h5,
+  .like-h5 {
+    @include typeface(primary, 7);
+    font-weight: 400;
+
+    @screen md {
+      @include typeface(primary, 8);
+      font-weight: 500;
+    }
+  }
+
+  label,
+  .small {
+    font-size: var(--font-size-5);
+
+    @screen md {
+      font-size: var(--font-size-5);
+    }
+  }
+
+  label {
+    display: block;
+  }
+
+  .font-semibold {
+    font-weight: 500 !important;
+  }
+}

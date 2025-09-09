@@ -1,0 +1,180 @@
+@tailwind base;
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: var(--background);
+    font-family: var(--font-family);
+    font-weight: 400;
+    transition: var(--transition);
+    min-height: 100vh;
+    color: var(--p-text-color);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: lining-nums;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--link-color);
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    transition:
+        outline-color 0.2s,
+        border-color 0.2s;
+    -webkit-touch-callout: none;
+    /* disable the iOS long press action */
+    -webkit-user-select: none;
+
+    &:hover {
+        color: var(--link-hover-color);
+        border-bottom-color: var(--link-hover-color);
+    }
+
+    /* disable text selection */
+    &.plain {
+        border-bottom: none;
+    }
+}
+
+ul {
+    padding-left: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-container-width);
+    margin: auto;
+}
+
+.cursor-pointer,
+.clickable {
+    cursor: pointer;
+    opacity: 1;
+    transition: var(--transition);
+
+    &:hover {
+        opacity: var(--opacity-on-hover);
+    }
+}
+
+/* Colors */
+.text-white {
+    color: var(--white) !important;
+}
+.text-black {
+    color: var(--black) !important;
+}
+.text-light-gray {
+    color: var(--light-gray) !important;
+}
+.text-dark-gray {
+    color: var(--dark-gray) !important;
+}
+.text-green {
+    color: var(--green) !important;
+}
+.text-orange {
+    color: var(--orange) !important;
+}
+.text-purple {
+    color: var(--purple) !important;
+}
+.text-blue {
+    color: var(--blue) !important;
+}
+.text-red {
+    color: var(--red) !important;
+}
+.bg-white {
+    background-color: var(--white) !important;
+}
+.bg-black {
+    background-color: var(--black) !important;
+}
+.bg-light-gray {
+    background-color: var(--light-gray) !important;
+}
+.bg-dark-gray {
+    background-color: var(--dark-gray) !important;
+}
+.bg-green {
+    background-color: var(--green) !important;
+}
+.bg-orange {
+    background-color: var(--orange) !important;
+}
+.bg-purple {
+    background-color: var(--purple) !important;
+}
+.bg-blue {
+    background-color: var(--blue) !important;
+}
+.bg-red {
+    background-color: var(--red) !important;
+}
+
+/* Primevue Overrides */
+.p-button-label {
+    font-size: var(--font-size-5);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.p-button-sm {
+    .p-button-label {
+        font-size: var(--font-size-4);
+    }
+}
+.p-button-outlined {
+    &:hover {
+        border-color: var(--p-button-primary-hover-background);
+        .p-button-label {
+            color: var(--p-button-primary-hover-color);
+        }
+    }
+}
+.p-tag {
+    font-size: var(--font-size-4) !important;
+    padding: var(--p-button-sm-padding-y) var(--p-button-sm-padding-x);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.p-card {
+    overflow: hidden;
+
+    .p-button {
+        height: 37px; // i don't know wht we need this, but here we are
+    }
+
+    .p-card-body {
+        padding: 1rem;
+
+        @screen md {
+            padding: 2rem;
+        }
+    }
+}
+.p-card .p-card-body {
+    height: 100%;
+    display: flex;
+
+    @screen md {
+        justify-content: center;
+    }
+}
+.p-progressspinner-circle {
+    stroke: var(--p-button-primary-background) !important;
+}

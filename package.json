@@ -1,0 +1,29 @@
+{
+  "name": "primevue-nuxt-boilerplate",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/tailwindcss": "^6.13.2",
+    "@primeuix/themes": "^1.0.0",
+    "@primevue/forms": "^4.3.2",
+    "nuxt": "^3.16.0",
+    "tailwindcss-primeui": "^0.5.1"
+  },
+  "devDependencies": {
+    "@primevue/nuxt-module": "^4.3.2",
+    "primeicons": "^7.0.0",
+    "sass": "^1.85.1"
+  }
+}

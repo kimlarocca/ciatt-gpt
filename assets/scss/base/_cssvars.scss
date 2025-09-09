@@ -1,0 +1,133 @@
+:root,
+[data-style-mode='light'],
+.light-mode {
+    --font-family: 'Inter', sans-serif;
+    --font-family-header: 'Playfair Display', sans-serif;
+    --font-size: 1rem;
+    --font-ratio: 1.125;
+    --font-size-1: calc(var(--font-size-2) / var(--font-ratio));
+    --font-size-2: calc(var(--font-size-3) / var(--font-ratio));
+    --font-size-3: calc(var(--font-size-4) / var(--font-ratio));
+    --font-size-4: calc(var(--font-size-5) / var(--font-ratio));
+    --font-size-5: calc(var(--font-size-6) / var(--font-ratio));
+    --font-size-6: var(--font-size);
+    --font-size-7: calc(var(--font-size-6) * var(--font-ratio));
+    --font-size-8: calc(var(--font-size-7) * var(--font-ratio));
+    --font-size-9: calc(var(--font-size-8) * var(--font-ratio));
+    --font-size-10: calc(var(--font-size-9) * var(--font-ratio));
+    --font-size-11: calc(var(--font-size-10) * var(--font-ratio));
+    --font-size-12: calc(var(--font-size-11) * var(--font-ratio));
+    --font-size-13: calc(var(--font-size-12) * var(--font-ratio));
+    --font-size-14: calc(var(--font-size-13) * var(--font-ratio));
+    --font-size-15: calc(var(--font-size-14) * var(--font-ratio));
+    --font-size-16: calc(var(--font-size-15) * var(--font-ratio));
+    --font-size-17: calc(var(--font-size-16) * var(--font-ratio));
+    --font-size-18: calc(var(--font-size-17) * var(--font-ratio));
+    --font-size-19: calc(var(--font-size-18) * var(--font-ratio));
+    --font-size-20: calc(var(--font-size-19) * var(--font-ratio));
+    --font-weight: normal;
+    --font-weight-100: 100;
+    --font-weight-200: 200;
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --font-weight-800: 800;
+    --font-weight-900: 900;
+
+    --opacity-on-hover: 0.7;
+    --transition: all var(--p-transition-duration) ease-out;
+    --max-container-width: 1366px;
+    --border-radius: 22px;
+
+    --white: rgb(255, 255, 255);
+    --white-opacity: rgba(255, 255, 255, var(--opacity-on-hover));
+    --black: rgb(11, 15, 43);
+    --black-opacity: rgba(11, 15, 43, var(--opacity-on-hover));
+    --light-gray: rgb(242, 242, 242);
+    --light-gray-opacity: rgba(242, 242, 242, var(--opacity-on-hover));
+    --dark-gray: rgb(41, 41, 41);
+    --dark-gray-opacity: rgba(41, 41, 41, var(--opacity-on-hover));
+
+    --green: rgb(74, 207, 172);
+    --green-opacity: rgba(74, 207, 172, var(--opacity-on-hover));
+    --orange: rgb(255, 175, 95);
+    --orange-opacity: rgba(255, 175, 95, var(--opacity-on-hover));
+    --purple: rgb(126, 140, 224);
+    --purple-opacity: rgba(126, 140, 224, var(--opacity-on-hover));
+    --blue: rgb(54, 199, 208);
+    --blue-opacity: rgba(54, 199, 208, var(--opacity-on-hover));
+    --red: rgb(227, 37, 37);
+    --red-opacity: rgba(227, 37, 37, var(--opacity-on-hover));
+
+    --primary-color: var(--green);
+    --primary-color-opacity: var(--green-opacity);
+
+    --background: var(--black);
+    --text-color: var(--white);
+    --link-color: var(--primary-color);
+    --link-hover-color: var(--primary-color);
+
+    --p-button-padding-x: 2rem;
+    --p-button-sm-padding-x: 1rem;
+    --p-button-border-radius: var(--border-radius);
+    --p-button-transition-duration: var(--p-transition-duration);
+    --p-button-primary-background: var(--primary-color);
+    --p-button-primary-color: var(--white);
+    --p-button-primary-hover-background: var(--primary-color-opacity);
+    --p-button-primary-hover-border-color: var(--primary-color-opacity);
+    --p-button-primary-hover-color: var(--white);
+    --p-button-primary-active-background: var(--primary-color);
+    --p-button-primary-active-color: var(--white);
+    --p-button-primary-border-color: var(--primary-color);
+
+    --p-button-outlined-primary-border-color: var(--primary-color);
+    --p-button-outlined-primary-color: var(--primary-color);
+    --p-button-outlined-primary-active-background: var(--primary-color);
+    --p-button-outlined-primary-hover-background: var(--primary-color);
+
+    --p-card-background: rgba(0, 0, 0, 0.05);
+    --p-card-shadow: none;
+    --p-card-body-gap: 1rem;
+
+    --p-tag-border-radius: var(--border-radius);
+    --p-tag-primary-background: var(--p-button-primary-background);
+    --p-tag-primary-color: var(--white);
+    --p-tag-contrast-background: var(--black);
+    --p-tag-contrast-color: var(--white);
+
+    //forms
+    --p-radiobutton-checked-background: var(--p-button-primary-background);
+    --p-radiobutton-checked-border-color: var(--p-button-primary-background);
+    --p-radiobutton-checked-hover-border-color: var(--p-button-primary-hover-background);
+    --p-radiobutton-checked-hover-background: var(--p-button-primary-hover-background);
+    --p-checkbox-checked-background: var(--p-button-primary-background);
+    --p-checkbox-checked-border-color: var(--p-button-primary-background);
+    --p-checkbox-checked-hover-background: var(--p-button-primary-hover-background);
+    --p-checkbox-checked-hover-border-color: var(--p-button-primary-hover-background);
+    --p-checkbox-icon-checked-color: var(--p-button-primary-color);
+    --p-checkbox-checked-hover-color: var(--p-button-primary-color);
+    --p-toggleswitch-checked-background: var(--p-button-primary-background);
+    --p-toggleswitch-checked-hover-background: var(--p-button-primary-hover-background);
+}
+
+[data-style-mode='dark'],
+.dark-mode {
+    --white: rgb(226, 232, 236);
+    --white-opacity: rgba(226, 232, 236, var(--opacity-on-hover));
+
+    --background: var(--black);
+    --text-color: var(--white);
+    --link-color: var(--primary-color);
+    --link-hover-color: var(--primary-color);
+
+    --p-button-primary-color: var(--black);
+    --p-button-primary-hover-color: var(--black);
+
+    --p-card-background: rgba(255, 255, 255, 0.05);
+
+    --p-tag-primary-color: var(--black);
+    --p-tag-contrast-background: var(--white);
+    --p-tag-contrast-color: var(--black);
+}
