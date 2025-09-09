@@ -1,8 +1,8 @@
 :root,
 [data-style-mode='light'],
 .light-mode {
-    --font-family: 'Nunito Sans', sans-serif;
-    --font-family-header: 'Nunito Sans', sans-serif;
+    --font-family: 'Georgia', sans-serif;
+    --font-family-header: 'Georgia', sans-serif;
     --font-size: 1rem;
     --font-ratio: 1.125;
     --font-size-1: calc(var(--font-size-2) / var(--font-ratio));
@@ -61,7 +61,7 @@
     --red: rgb(227, 37, 37);
     --red-opacity: rgba(227, 37, 37, var(--opacity-on-hover));
 
-    --primary-color: var(--green);
+    --primary-color: var(--red);
     --primary-color-opacity: var(--green-opacity);
 
     --background: var(--white);
