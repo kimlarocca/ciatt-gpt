@@ -329,7 +329,7 @@ async function errorHandler(error, event) {
 
 const rootDir = "/Users/kimlarocca/Websites/dearest-jack";
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"msapplication-TileColor","content":"#0a84ff"},{"name":"theme-color","content":"#0a84ff"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","href":"/apple-touch-icon.png"},{"rel":"manifest","href":"/site.webmanifest"},{"rel":"mask-icon","href":"/safari-pinned-tab.svg","color":"#ff3904"},{"rel":"preconnect","href":"https://fonts.googleapis.com"}],"style":[],"script":[],"noscript":[],"title":"Nuxt Primevue Boilerplate","htmlAttrs":{"lang":"en"}};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"msapplication-TileColor","content":"#0a84ff"},{"name":"theme-color","content":"#0a84ff"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","href":"/apple-touch-icon.png"},{"rel":"manifest","href":"/site.webmanifest"},{"rel":"mask-icon","href":"/safari-pinned-tab.svg","color":"#ff3904"},{"rel":"preconnect","href":"https://fonts.googleapis.com"}],"style":[],"script":[],"noscript":[],"title":"DearestJack.com - Paging the Real Jack Ciattarelli","htmlAttrs":{"lang":"en"}};
 
 const appRootTag = "div";
 

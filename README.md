@@ -1,5 +1,7 @@
-# PrimeVue Nuxt Boilerplate
+# DearestJack.com
+
 NODE VERSION: 22.14.0
+
 ## Setup
 
 Make sure to install dependencies:

@@ -1,8 +1,27 @@
 <template>
-  <div class="container p-10 lg:p-20">
-    <section>
-      <h1 class="mb-4">Dearest Jack,</h1>
-      <h2 class="mb-6">I used to believe in you.</h2>
+  <div class="container p-2 lg:p-4">
+    <section class="text-center mb-6">
+      <div class="hidden md:block">
+        <DearestJackSVG />
+      </div>
+      <h1 class="md:hidden">Dearest Jack</h1>
+      <h2 class="text-center mb-16">I used to believe in you.</h2>
+      <a href="/original-letter.png" target="_blank" class="plain">
+        <img
+          class="m-auto"
+          src="/letter.png"
+          alt="Letter to Jack Ciattarelli"
+        />
+      </a>
+      <div class="flex align-center justify-center my-8">
+        <img src="/signature.png" alt="signature for disgusted in new jersey" />
+      </div>
+    </section>
+    <section style="max-width: 887px; margin: auto">
+      <hr
+        class="mb-12"
+        style="height: 20px; border: none; background: var(--black)"
+      />
       <p class="mb-4">
         You spoke like someone who understood New Jersey - its grit, its talent,
         its heartbreak, its hope. You blamed Christie for the mess. You blamed
@@ -78,13 +97,13 @@
         And if you stand for nothing, you don't deserve to lead this state.
       </p>
       <p class="mb-4 italic">— A New Jerseyan who remembers</p>
+      <p class="text-center text-sm">
+        This website was not requested or authorized by any candidate or
+        candidate's committee.<br />Paid for by
+        <a href="https://www.papnj.com" target="_blank">People Are People LLC</a
+        >, 971 US Highway 202N #8014, Branchburg, NJ 08876.
+      </p>
     </section>
+    <FloatingDonateButton />
   </div>
 </template>
-
-<style lang="scss" scoped>
-.container {
-  border-radius: 30px;
-  border: 3px solid var(--white);
-}
-</style>

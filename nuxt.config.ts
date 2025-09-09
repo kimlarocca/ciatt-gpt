@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Nuxt Primevue Boilerplate', // default fallback title
+      title: 'DearestJack.com - Paging the Real Jack Ciattarelli', // default fallback title
       htmlAttrs: {
         lang: 'en',
       },

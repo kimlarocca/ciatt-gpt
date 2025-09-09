@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main class="p-6 lg:p-16">
+    <main>
       <NuxtPage />
     </main>
   </div>

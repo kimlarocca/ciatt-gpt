@@ -1,8 +1,8 @@
 :root,
 [data-style-mode='light'],
 .light-mode {
-    --font-family: 'Inter', sans-serif;
-    --font-family-header: 'Playfair Display', sans-serif;
+    --font-family: 'Nunito Sans', sans-serif;
+    --font-family-header: 'Nunito Sans', sans-serif;
     --font-size: 1rem;
     --font-ratio: 1.125;
     --font-size-1: calc(var(--font-size-2) / var(--font-ratio));
@@ -64,8 +64,8 @@
     --primary-color: var(--green);
     --primary-color-opacity: var(--green-opacity);
 
-    --background: var(--black);
-    --text-color: var(--white);
+    --background: var(--white);
+    --text-color: var(--black);
     --link-color: var(--primary-color);
     --link-hover-color: var(--primary-color);
 
