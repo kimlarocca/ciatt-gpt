@@ -38,7 +38,7 @@
           ></span
         ><span
           >&nbsp;that he's a “charlatan,” and an “embarrassment” who is “not fit
-          to be President of the United States. </span
+          to be President of the United States.” </span
         ><span class="c8 c3">Who and what are you protecting?</span>
       </p>
       <p class="mb-4">
