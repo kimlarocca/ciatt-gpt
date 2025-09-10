@@ -4,7 +4,7 @@
       <a target="_blank" href="/original-letter.png" class="plain">
         <img
           class="m-auto"
-          src="/letter.png"
+          src="/letter.jpg"
           alt="Letter to Jack Ciattarelli"
         />
       </a>
