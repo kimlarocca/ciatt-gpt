@@ -10,12 +10,12 @@ body {
     margin: 0;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background: var(--background);
+    background: var(--background) !important;
     font-family: var(--font-family);
     font-weight: 400;
     transition: var(--transition);
     min-height: 100vh;
-    color: var(--p-text-color);
+    color: var(--black) !important;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
