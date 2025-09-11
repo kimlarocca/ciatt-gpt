@@ -32,7 +32,7 @@
           ><a
             target="_blank"
             class="c0"
-            href="https://www.google.com/url?q=https://www.mycentraljersey.com/story/news/politics/2015/12/10/jack-ciattarelli-vs-donald-trump/77115510/&amp;sa=D&amp;source=editors&amp;ust=1757450415476297&amp;usg=AOvVaw0PJ97iERWgvgjDqzrgNScC"
+            href="https://www.mycentraljersey.com/story/news/politics/2015/12/10/jack-ciattarelli-vs-donald-trump/77115510"
             >You told me “Mr. Trump preys upon our worst instincts and
             fears,”</a
           ></span
@@ -49,7 +49,7 @@
           ><a
             target="_blank"
             class="c0"
-            href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DfYqKx1GuZGg&amp;sa=D&amp;source=editors&amp;ust=1757450415476703&amp;usg=AOvVaw1GaEr3_SChGPLtmxiJ8nL3"
+            href="https://www.youtube.com/watch?v=fYqKx1GuZGg"
             >grabbing women by their private parts</a
           ></span
         ><span>, </span
@@ -57,7 +57,7 @@
           ><a
             target="_blank"
             class="c0"
-            href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DkikTv0I8XVw&amp;sa=D&amp;source=editors&amp;ust=1757450415476816&amp;usg=AOvVaw1uiaT0p6Bo_YNEPL1SLWKZ"
+            href="https://www.youtube.com/watch?v=kikTv0I8XVw"
             >walking into underage dressing rooms</a
           ></span
         ><span>, and was </span
@@ -65,7 +65,7 @@
           ><a
             target="_blank"
             class="c0"
-            href="https://www.google.com/url?q=https://www.pbs.org/newshour/politics/the-facts-and-timeline-of-trump-and-epsteins-falling-out&amp;sa=D&amp;source=editors&amp;ust=1757450415476959&amp;usg=AOvVaw2iGtde4zm3cbTfH-Nn997z"
+            href="https://www.pbs.org/newshour/politics/the-facts-and-timeline-of-trump-and-epsteins-falling-out"
             >close friends with a convicted sex trafficker</a
           ></span
         ><span>. Jack - will you ever stand up for women?</span>
@@ -87,7 +87,7 @@
           ><a
             target="_blank"
             class="c0"
-            href="https://www.google.com/url?q=https://www.pbs.org/video/decision-2021-who-will-lead-nj-with-jack-ciattarelli-i50cwr/&amp;sa=D&amp;source=editors&amp;ust=1757450415477889&amp;usg=AOvVaw1lBsGvEVX7q-xz7GAbyZQt"
+            href="https://www.pbs.org/video/decision-2021-who-will-lead-nj-with-jack-ciattarelli-i50cwr/"
             >you admitted that Trump, Guiliani, and others contributed to the
             riot, and that those who violated the law should be prosecuted to
             the full extent of the law</a
@@ -113,7 +113,7 @@
           ><a
             target="_blank"
             class="c0"
-            href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3D2TnsMJn1pU0&amp;sa=D&amp;source=editors&amp;ust=1757450415478619&amp;usg=AOvVaw2Wh7FHdrNh0CsPZfsIZdwF"
+            href="https://www.youtube.com/watch?v=2TnsMJn1pU0"
             >banning profanity</a
           ></span
         ><span class="c2"
@@ -130,7 +130,7 @@
           ><a
             target="_blank"
             class="c0"
-            href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DB2jbdWkAJWA&amp;sa=D&amp;source=editors&amp;ust=1757450415479140&amp;usg=AOvVaw1owVXzpfxnY9cljl8j2uP2"
+            href="https://www.youtube.com/watch?v=B2jbdWkAJWA"
             >never advocated for overturning Roe v. Wade</a
           ></span
         ><span
@@ -149,7 +149,7 @@
           ><a
             target="_blank"
             class="c0"
-            href="https://www.google.com/url?q=https://www.insidernj.com/press-release/ciattarelli-doubles-anti-science-covid-19-misinformation-record-editorial-board-meeting/&amp;sa=D&amp;source=editors&amp;ust=1757450415479645&amp;usg=AOvVaw1skHKZbiU80JRN6cuKknSG"
+            href="https://www.insidernj.com/press-release/ciattarelli-doubles-anti-science-covid-19-misinformation-record-editorial-board-meeting/"
             >vaccines</a
           ></span
         ><span class="c2"
@@ -167,7 +167,7 @@
           ><a
             target="_blank"
             class="c0"
-            href="https://www.google.com/url?q=https://gizmodo.com/trump-family-cryptocurrency-5-billion-richer-wlfi-price-2000652197&amp;sa=D&amp;source=editors&amp;ust=1757450415480179&amp;usg=AOvVaw2w1UYG26MZd6_KYj5s153L"
+            href="https://gizmodo.com/trump-family-cryptocurrency-5-billion-richer-wlfi-price-2000652197"
             >$5 billion crypto grift</a
           ></span
         ><span>.</span><span>&nbsp;</span
