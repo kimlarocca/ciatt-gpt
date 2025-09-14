@@ -70,7 +70,7 @@
             >close friends with a convicted sex trafficker</a
           ></span
         ><span>. </span
-        ><span class="c12">Will you ever stand up for women, Jack?</span>
+        ><span class="font-bold">Will you ever stand up for women, Jack?</span>
       </p>
       <p class="mb-4">
         <span
@@ -78,7 +78,7 @@
           divided our country, you headlined a Stop The Steal rally undermining
           faith in our elections. After the January 6th riot, you felt the
           politics turning and finally admitted that Biden won the election. </span
-        ><span class="c12"
+        ><span class="font-bold"
           >Disturbingly, you didn't speak up when Trump pardoned the rioters who
           assaulted Capitol Police officers, including Brian Sicknick, a New
           Jerseyan who died defending democracy</span
