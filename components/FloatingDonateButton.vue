@@ -27,12 +27,12 @@ function openLinktree () {
 <style scoped>
 .floating-donate-btn {
   position: fixed;
-  bottom: 2rem;
+  top: 2rem;
   left: auto;
   right: 2rem;
   z-index: 1000;
   @media (max-width: 768px) {
-    bottom: 1rem;
+    top: 1rem;
     left: 1rem;
     right: 1rem;
     margin: 0 auto;

@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'People Are People NJ', // default fallback title
+      title: 'Ciatt GPT  | always checks what Donald Trump says before making any statements', // default fallback title
       htmlAttrs: {
         lang: 'en',
       },
@@ -65,7 +65,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       environment: process.env.environment ?? 'local',
-      gtagId: 'G-XXXXXXXXX', // Google Analytics ID
+      gtagId: 'G-5B1JJV3XNZ', // Google Analytics ID
     }
   }
 })
