@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'DearestJack.com - Paging the Real Jack Ciattarelli', // default fallback title
+      title: 'People Are People NJ', // default fallback title
       htmlAttrs: {
         lang: 'en',
       },
@@ -28,10 +28,7 @@ export default defineNuxtConfig({
           rel: 'preconnect',
           href: 'https://fonts.googleapis.com'
         }
-      ],
-      // script: [
-      //   { src: 'https://www.googletagmanager.com/gtag/js?id=G-7GDC05EZKE' }
-      // ]
+      ]
     }
   },
 
@@ -68,7 +65,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       environment: process.env.environment ?? 'local',
-      gtagId: 'G-FVMBBHKXC5',
+      gtagId: 'G-XXXXXXXXX', // Google Analytics ID
     }
   }
 })

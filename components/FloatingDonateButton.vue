@@ -7,7 +7,7 @@
       Volunteer
     </button>
     <button @click="openLinktree" aria-label="Linktree" class="icon-btn">
-      <i class="pi pi-link" style="font-size: 1.5rem; color: var(--white)"></i>
+      <i class="pi pi-link" style="font-size: 1.25rem; color: var(--white)"></i>
     </button>
   </div>
 </template>
@@ -28,8 +28,16 @@ function openLinktree () {
 .floating-donate-btn {
   position: fixed;
   bottom: 2rem;
+  left: auto;
   right: 2rem;
   z-index: 1000;
+  @media (max-width: 768px) {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    margin: 0 auto;
+    width: fit-content;
+  }
 }
 .donate-btn,
 .volunteer-btn {
@@ -51,6 +59,7 @@ function openLinktree () {
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
 }
 .icon-btn {
+  min-width: 44px;
   background: black;
   border: none;
   padding: 0.5rem;
