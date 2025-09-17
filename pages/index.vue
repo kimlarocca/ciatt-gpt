@@ -3,7 +3,7 @@
     <!-- Header -->
     <header class="border-b border-gray-700 p-4">
       <div class="max-w-4xl mx-auto flex items-center justify-between">
-        <h1 class="text-white text-xl font-semibold">Ciatt GPT</h1>
+        <h1 class="text-white text-3xl font-bold">Ciatt GPT</h1>
         <div class="flex items-center gap-2">
           <button
             @click="clearChat"

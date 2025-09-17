@@ -7,7 +7,7 @@
           v-model="inputText"
           @keydown="handleKeydown"
           @input="adjustHeight"
-          placeholder="Message ChatGPT..."
+          placeholder="Message CiattGPT..."
           class="w-full bg-gray-700 text-white rounded-lg px-4 py-3 pr-12 resize-none border border-gray-600 focus:border-gray-500 focus:outline-none placeholder-gray-400"
           rows="1"
           :disabled="disabled"
@@ -17,7 +17,7 @@
         <button
           @click="sendMessage"
           :disabled="!canSend"
-          class="absolute right-2 bottom-2 p-2 rounded-lg transition-colors"
+          class="absolute right-4 top-0 bottom-0 px-2 rounded-lg transition-colors"
           :class="
             canSend
               ? 'bg-green-600 hover:bg-green-700 text-white'
@@ -42,7 +42,7 @@
 
       <!-- Footer text -->
       <p class="text-xs text-gray-500 text-center mt-2">
-        ChatGPT can make mistakes. Check important info.
+        CiattGPT makes a lot of mistakes and often flip-flops on opinions.
       </p>
     </div>
   </div>

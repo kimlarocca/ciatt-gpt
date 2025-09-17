@@ -5,7 +5,7 @@
       class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-medium"
       :class="message.isUser ? 'bg-green-600' : 'bg-gray-600'"
     >
-      {{ message.isUser ? 'U' : 'CIATT' }}
+      {{ message.isUser ? 'You' : 'JC' }}
     </div>
 
     <!-- Message Content -->
