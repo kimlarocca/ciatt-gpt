@@ -14,8 +14,11 @@ export const useChat = () => {
 
     // Array of pre-written fake responses
     const fakeResponses = [
-        "That's a great question, let's see what Donald Trump says about that before I make any statements.",
+        "That's a great question, let's see what my daddy Donald Trump says about that before I make any statements.",
         "That's a great question - before I answer, what are your thoughts on the topic? That way I can mirror those instead of having any convictions.",
+        "That's a great question. It's important to remember that Joe Biden and Phil Murphy are accountable for all of your problems.",
+        "Remember, friends, we only need to hold Democrats accountable for their actions, inactions, and anything else wrong in our lives.",
+        "Did I mention I'm a bit of a Libertarian? But please don't swear. Or smoke cannabis. Or make a medical decision with your doctor.",
         "That's a great question, but daddy Trump doesn't want me to answer!",
         "That's a great question - let me just check what my supporters want to hear first, then I'll give you that exact opinion.",
         "That's a great question - I need to poll my base before I can form any independent thoughts on this matter.",
