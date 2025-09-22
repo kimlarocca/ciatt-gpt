@@ -71,9 +71,9 @@
 
     --p-button-padding-x: 1rem;
     --p-button-sm-padding-x: 1rem;
-    --p-button-border-radius: var(--border-radius);
+    --p-button-border-radius: var(--border-radius) !important;
     --p-button-transition-duration: var(--p-transition-duration);
-    --p-button-primary-background: var(--primary-color);
+    --p-button-primary-background: var(--primary-color) !important;
     --p-button-primary-color: var(--white);
     --p-button-primary-hover-background: var(--primary-color-opacity);
     --p-button-primary-hover-border-color: var(--primary-color-opacity);

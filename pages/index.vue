@@ -3,7 +3,7 @@
     <!-- Header -->
     <header class="border-b border-gray-700 p-4 flex-shrink-0">
       <div class="max-w-4xl mx-auto flex items-center justify-between">
-        <p class="text-white">CiattGPT</p>
+        <p @click="clearChat" class="text-white cursor-pointer">CiattGPT</p>
         <div class="flex items-center gap-2">
           <Button
             v-tooltip.bottom="`Start a new chat!`"
@@ -62,43 +62,39 @@
             >
               <Button
                 @click="
-                  handleSendMessage(
-                    'What are your thoughts on current politics?'
-                  )
+                  handleSendMessage('What are your thoughts on abortion?')
                 "
                 class="p-4 text-white bg-gray-800 text-left transition-colors border-1 border-gray-800"
               >
-                <div class="font-medium text-sm">💭 Ask about politics</div>
+                <div class="font-medium text-sm">👩 Ask about abortion</div>
               </Button>
 
               <Button
                 @click="
-                  handleSendMessage('Can you give me an unbiased opinion?')
+                  handleSendMessage('Should the military take over our cities?')
                 "
                 class="p-4 text-white bg-gray-800 text-left transition-colors border-1 border-gray-800"
               >
                 <div class="font-medium text-sm">
-                  ⚖️ Request Jack's unbiased opinion
+                  🪖 Should the military take over our cities?
                 </div>
+              </Button>
+
+              <Button
+                @click="handleSendMessage('Is it ok to be gay?')"
+                class="p-4 text-white bg-gray-800 text-left transition-colors border-1 border-gray-800"
+              >
+                <div class="font-medium text-sm">🌈 Is it ok to be gay?</div>
               </Button>
 
               <Button
                 @click="
-                  handleSendMessage('Tell me about transparency in government')
+                  handleSendMessage('How do we lower crime in New Jersey?')
                 "
                 class="p-4 text-white bg-gray-800 text-left transition-colors border-1 border-gray-800"
               >
                 <div class="font-medium text-sm">
-                  🏛️ Ask about government transparency
-                </div>
-              </Button>
-
-              <Button
-                @click="handleSendMessage('What makes a good leader?')"
-                class="p-4 text-white bg-gray-800 text-left transition-colors border-1 border-gray-800"
-              >
-                <div class="font-medium text-sm">
-                  👑 Jack's leadership qualities
+                  🚔 How do we lower crime in New Jersey?
                 </div>
               </Button>
             </div>
@@ -167,3 +163,10 @@ function openLinktree() {
   window.open('https://linktr.ee/papnj', '_blank')
 }
 </script>
+
+<style lang="scss" scoped>
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1)) !important;
+}
+</style>
