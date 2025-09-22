@@ -1,48 +1,23 @@
 <template>
-  <div class="border-t border-gray-700 bg-gray-800 p-4">
-    <div class="max-w-4xl mx-auto">
-      <div class="relative">
-        <textarea
-          ref="textareaRef"
-          v-model="inputText"
-          @keydown="handleKeydown"
-          @input="adjustHeight"
-          placeholder="Message CiattGPT..."
-          class="w-full bg-gray-700 text-white rounded-lg px-4 py-3 pr-12 resize-none border border-gray-600 focus:border-gray-500 focus:outline-none placeholder-gray-400"
-          rows="1"
+  <div class="p-4 bg-gray-900 fixed bottom-0 left-0 right-0">
+    <div class="max-w-5xl mx-auto">
+      <InputGroup class="mb-5">
+        <InputText
+          placeholder="Ask anything..."
           :disabled="disabled"
-        ></textarea>
-
-        <!-- Send Button -->
-        <button
-          @click="sendMessage"
-          :disabled="!canSend"
-          class="absolute right-4 top-0 bottom-0 px-2 rounded-lg transition-colors"
-          :class="
-            canSend
-              ? 'bg-green-600 hover:bg-green-700 text-white'
-              : 'bg-gray-600 text-gray-400 cursor-not-allowed'
-          "
-        >
-          <svg
-            class="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-            />
-          </svg>
-        </button>
-      </div>
+          v-model="inputText"
+          class="text-white"
+          @keypress.enter="sendMessage"
+        />
+        <Button icon="pi pi-send" @click="sendMessage" :disabled="!canSend" />
+      </InputGroup>
 
       <!-- Footer text -->
       <p class="text-xs text-gray-500 text-center mt-2">
-        CiattGPT makes a lot of mistakes and often flip-flops on opinions.
+        This website was not requested or authorized by any candidate or
+        candidate's committee. Paid for by
+        <a target="_blank" href="https://www.papnj.com">People Are People LLC</a
+        >, 971 US Highway 202N #8014, Branchburg, NJ 08876.
       </p>
     </div>
   </div>
@@ -102,3 +77,22 @@ onMounted(() => {
   textareaRef.value?.focus()
 })
 </script>
+
+<style lang="scss" scoped>
+.p-inputtext {
+  border-top-left-radius: var(--border-radius) !important;
+  border-bottom-left-radius: var(--border-radius) !important;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1)) !important;
+  border: none;
+  padding: 1rem !important;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+}
+.p-inputgroup button {
+  border-top-right-radius: var(--border-radius) !important;
+  border-bottom-right-radius: var(--border-radius) !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.75rem !important;
+}
+</style>

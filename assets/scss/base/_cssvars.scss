@@ -1,8 +1,8 @@
 :root,
 [data-style-mode='light'],
 .light-mode {
-    --font-family: 'Georgia', sans-serif;
-    --font-family-header: 'Georgia', sans-serif;
+    --font-family: 'Open Sans', sans-serif;
+    --font-family-header: 'Open Sans', sans-serif;
     --font-size: 1rem;
     --font-ratio: 1.125;
     --font-size-1: calc(var(--font-size-2) / var(--font-ratio));
@@ -61,15 +61,15 @@
     --red: rgb(227, 37, 37);
     --red-opacity: rgba(227, 37, 37, var(--opacity-on-hover));
 
-    --primary-color: var(--red);
-    --primary-color-opacity: var(--green-opacity);
+    --primary-color: var(--purple);
+    --primary-color-opacity: var(--purple-opacity);
 
     --background: var(--black);
     --text-color: var(--white);
     --link-color: var(--primary-color);
     --link-hover-color: var(--primary-color);
 
-    --p-button-padding-x: 2rem;
+    --p-button-padding-x: 1rem;
     --p-button-sm-padding-x: 1rem;
     --p-button-border-radius: var(--border-radius);
     --p-button-transition-duration: var(--p-transition-duration);

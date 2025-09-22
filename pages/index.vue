@@ -1,109 +1,106 @@
 <template>
-  <div class="min-h-screen bg-gray-900 text-white flex flex-col">
+  <div class="h-screen bg-gray-900 text-white flex flex-col">
     <!-- Header -->
-    <header class="border-b border-gray-700 p-4">
+    <header class="border-b border-gray-700 p-4 flex-shrink-0">
       <div class="max-w-4xl mx-auto flex items-center justify-between">
-        <h1 class="text-white text-3xl font-bold">CiattGPT</h1>
+        <p class="text-white">CiattGPT</p>
         <div class="flex items-center gap-2">
-          <button
+          <Button
+            v-tooltip.bottom="`Start a new chat!`"
+            aria-label="New Chat"
             @click="clearChat"
-            class="px-4 py-2 text-white bg-gray-700 hover:bg-gray-600 rounded-lg text-sm transition-colors"
+            class="text-white cursor-pointer"
           >
-            New chat
-          </button>
-          <button
+            <i class="pi pi-plus" />
+          </Button>
+          <Button
             @click="openDonate"
             aria-label="Donate"
-            class="px-4 text-white py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm transition-colors"
+            class="hidden lg:block cursor-pointer text-white"
           >
             Donate
-          </button>
-          <button
+          </Button>
+          <Button
             @click="openVolunteer"
             aria-label="Volunteer"
-            class="px-4 text-white py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm transition-colors"
+            class="hidden lg:block cursor-pointer text-white"
           >
             Volunteer
-          </button>
-          <button
+          </Button>
+          <Button
             @click="openLinktree"
+            v-tooltip="`Get involved!`"
             aria-label="Linktree"
-            class="px-4 text-white py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm transition-colors"
+            class="text-white cursor-pointer"
           >
             <i
               class="pi pi-link"
               style="font-size: 1rem; color: var(--white)"
             ></i>
-          </button>
+          </Button>
         </div>
       </div>
     </header>
 
     <!-- Chat Messages -->
-    <main class="flex-1 overflow-hidden flex flex-col">
-      <div ref="messagesContainer" class="flex-1 overflow-y-auto px-4 py-6">
+    <main class="flex-1 min-h-0">
+      <div
+        ref="messagesContainer"
+        class="h-full overflow-y-auto p-4 scroll-smooth"
+        style="height: calc(100vh - 80px - 200px)"
+      >
         <div class="max-w-4xl mx-auto space-y-6">
           <!-- Welcome message when no messages -->
           <div v-if="messages.length === 0" class="text-center py-12">
-            <p class="text-white mb-8">
-              Ask me anything and I'll give you a totally unbiased response!
-            </p>
+            <h1 class="text-white text-2xl mb-8">
+              Ready to Ciatt when you are.
+            </h1>
 
             <!-- Example prompts -->
             <div
               class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl mx-auto"
             >
-              <button
+              <Button
                 @click="
                   handleSendMessage(
                     'What are your thoughts on current politics?'
                   )
                 "
-                class="p-4 text-white bg-gray-800 hover:bg-gray-700 rounded-lg text-left transition-colors border border-gray-700"
+                class="p-4 text-white bg-gray-800 text-left transition-colors border-1 border-gray-800"
               >
                 <div class="font-medium text-sm">💭 Ask about politics</div>
-                <div class="text-gray-400 text-xs mt-1">
-                  What are your thoughts on current politics?
-                </div>
-              </button>
+              </Button>
 
-              <button
+              <Button
                 @click="
                   handleSendMessage('Can you give me an unbiased opinion?')
                 "
-                class="p-4 text-white bg-gray-800 hover:bg-gray-700 rounded-lg text-left transition-colors border border-gray-700"
+                class="p-4 text-white bg-gray-800 text-left transition-colors border-1 border-gray-800"
               >
                 <div class="font-medium text-sm">
-                  ⚖️ Request unbiased opinion
+                  ⚖️ Request Jack's unbiased opinion
                 </div>
-                <div class="text-gray-400 text-xs mt-1">
-                  Can you give me an unbiased opinion?
-                </div>
-              </button>
+              </Button>
 
-              <button
+              <Button
                 @click="
                   handleSendMessage('Tell me about transparency in government')
                 "
-                class="p-4 text-white bg-gray-800 hover:bg-gray-700 rounded-lg text-left transition-colors border border-gray-700"
+                class="p-4 text-white bg-gray-800 text-left transition-colors border-1 border-gray-800"
               >
                 <div class="font-medium text-sm">
-                  🏛️ Government transparency
+                  🏛️ Ask about government transparency
                 </div>
-                <div class="text-gray-400 text-xs mt-1">
-                  Tell me about transparency in government
-                </div>
-              </button>
+              </Button>
 
-              <button
+              <Button
                 @click="handleSendMessage('What makes a good leader?')"
-                class="p-4 text-white bg-gray-800 hover:bg-gray-700 rounded-lg text-left transition-colors border border-gray-700"
+                class="p-4 text-white bg-gray-800 text-left transition-colors border-1 border-gray-800"
               >
-                <div class="font-medium text-sm">👑 Leadership qualities</div>
-                <div class="text-gray-400 text-xs mt-1">
-                  What makes a good leader?
+                <div class="font-medium text-sm">
+                  👑 Jack's leadership qualities
                 </div>
-              </button>
+              </Button>
             </div>
           </div>
 
@@ -116,12 +113,15 @@
 
           <!-- Typing Indicator -->
           <TypingIndicator v-if="isTyping" />
+
+          <!-- Bottom spacer for fixed input -->
+          <div style="height: 200px"></div>
         </div>
       </div>
-
-      <!-- Chat Input -->
-      <ChatInput @send="handleSendMessage" :disabled="isTyping" />
     </main>
+
+    <!-- Chat Input (Fixed position) -->
+    <ChatInput @send="handleSendMessage" :disabled="isTyping" />
   </div>
 </template>
 
@@ -134,19 +134,27 @@ const messagesContainer = ref<HTMLElement>()
 
 const handleSendMessage = (message: string) => {
   sendUserMessage(message)
+  // Force scroll after sending message
+  scrollToBottom()
+}
+
+const scrollToBottom = () => {
+  if (messagesContainer.value) {
+    setTimeout(() => {
+      if (messagesContainer.value) {
+        messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight
+      }
+    }, 100)
+  }
 }
 
 // Auto-scroll to bottom when new messages arrive
 watch(
   [messages, isTyping],
   () => {
-    nextTick(() => {
-      if (messagesContainer.value) {
-        messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight
-      }
-    })
+    scrollToBottom()
   },
-  { deep: true }
+  { deep: true, immediate: true }
 )
 
 function openDonate() {
