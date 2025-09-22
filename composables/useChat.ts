@@ -1,4 +1,5 @@
 import { ref, readonly } from 'vue'
+import keywordsData from '../utils/keywords.json'
 
 export interface Message {
     id: string
@@ -7,10 +8,18 @@ export interface Message {
     timestamp: Date
 }
 
+interface KeywordEntry {
+    Keywords: string[]
+    Response: string
+}
+
 export const useChat = () => {
     const messages = ref<Message[]>([])
     const isTyping = ref<boolean>(false)
     const lastResponseIndex = ref<number | null>(null)
+
+    // Load keywords from JSON file
+    const keywordEntries: KeywordEntry[] = keywordsData
 
     // Array of pre-written fake responses
     const fakeResponses = [
@@ -51,6 +60,35 @@ export const useChat = () => {
         return message.id
     }
 
+    const findKeywordMatch = (userMessage: string): string | null => {
+        const lowerMessage = userMessage.toLowerCase()
+
+        // Check each keyword entry for matches
+        for (const entry of keywordEntries) {
+            // Check if any keyword from this entry appears in the user message
+            const hasMatch = entry.Keywords.some(keyword =>
+                lowerMessage.includes(keyword.toLowerCase())
+            )
+
+            if (hasMatch) {
+                return entry.Response
+            }
+        }
+
+        return null
+    }
+
+    const getResponse = (userMessage: string): string => {
+        // First check for keyword matches
+        const keywordResponse = findKeywordMatch(userMessage)
+        if (keywordResponse) {
+            return keywordResponse
+        }
+
+        // If no keyword match, fall back to random response
+        return getRandomResponse()
+    }
+
     const getRandomResponse = (): string => {
         let randomIndex: number
 
@@ -82,9 +120,9 @@ export const useChat = () => {
 
         await new Promise(resolve => setTimeout(resolve, thinkingTime))
 
-        // Hide typing indicator and add fake response
+        // Hide typing indicator and add smart response
         isTyping.value = false
-        const response = getRandomResponse()
+        const response = getResponse(content)
         addMessage(response, false)
     }
 
