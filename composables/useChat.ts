@@ -130,6 +130,8 @@ export const useChat = () => {
         messages.value = []
         isTyping.value = false
         lastResponseIndex.value = null
+        //scroll to the top
+        window.scrollTo(0, 0)
     }
 
     return {

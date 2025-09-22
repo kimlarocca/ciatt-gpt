@@ -183,4 +183,10 @@ function openLinktree() {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1)) !important;
 }
+.hidden {
+  display: none !important;
+}
+.block {
+  display: block !important;
+}
 </style>
