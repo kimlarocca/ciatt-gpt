@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-start gap-3 mb-4 group">
+  <div class="flex items-start gap-3 mb-4 group chat-message">
     <!-- Avatar -->
     <div
       class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-medium"

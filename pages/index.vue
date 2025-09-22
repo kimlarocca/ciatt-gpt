@@ -131,24 +131,38 @@ const messagesContainer = ref<HTMLElement>()
 const handleSendMessage = (message: string) => {
   sendUserMessage(message)
   // Force scroll after sending message
-  scrollToBottom()
+  scrollToLatestMessage()
 }
 
-const scrollToBottom = () => {
-  if (messagesContainer.value) {
+const scrollToLatestMessage = () => {
+  if (messagesContainer.value && messages.value.length > 0) {
     setTimeout(() => {
       if (messagesContainer.value) {
-        messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight
+        // Find the last ChatMessage component
+        const chatMessages =
+          messagesContainer.value.querySelectorAll('.chat-message')
+        if (chatMessages.length > 0) {
+          const lastMessage = chatMessages[chatMessages.length - 1]
+          lastMessage.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          })
+        } else {
+          // Fallback to bottom if no messages found
+          messagesContainer.value.scrollTop =
+            messagesContainer.value.scrollHeight
+        }
       }
     }, 100)
   }
 }
 
-// Auto-scroll to bottom when new messages arrive
+// Auto-scroll to latest message when new messages arrive
 watch(
   [messages, isTyping],
   () => {
-    scrollToBottom()
+    scrollToLatestMessage()
   },
   { deep: true, immediate: true }
 )
