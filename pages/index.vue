@@ -9,14 +9,14 @@
             v-tooltip.bottom="`Start a new chat!`"
             aria-label="New Chat"
             @click="clearChat"
-            class="text-white cursor-pointer"
+            class="hidden lg:block text-white cursor-pointer"
           >
             <i class="pi pi-plus" />
           </Button>
           <Button
             @click="openDonate"
             aria-label="Donate"
-            class="hidden lg:block cursor-pointer text-white"
+            class="cursor-pointer text-white"
           >
             Donate
           </Button>
@@ -46,8 +46,7 @@
     <main class="flex-1 min-h-0">
       <div
         ref="messagesContainer"
-        class="h-full overflow-y-auto p-4 scroll-smooth"
-        style="height: calc(100vh - 80px - 200px)"
+        class="h-full overflow-y-auto p-4 scroll-smooth pb-4"
       >
         <div class="max-w-4xl mx-auto space-y-6">
           <!-- Welcome message when no messages -->
@@ -110,8 +109,8 @@
           <!-- Typing Indicator -->
           <TypingIndicator v-if="isTyping" />
 
-          <!-- Bottom spacer for fixed input -->
-          <div style="height: 200px"></div>
+          <!-- Bottom spacer for fixed input - adjusted for actual input height -->
+          <div class="h-32"></div>
         </div>
       </div>
     </main>
@@ -138,18 +137,31 @@ const scrollToLatestMessage = () => {
   if (messagesContainer.value && messages.value.length > 0) {
     setTimeout(() => {
       if (messagesContainer.value) {
-        // Find the last ChatMessage component
+        // Find the last user message
         const chatMessages =
           messagesContainer.value.querySelectorAll('.chat-message')
-        if (chatMessages.length > 0) {
-          const lastMessage = chatMessages[chatMessages.length - 1]
-          lastMessage.scrollIntoView({
+
+        // Find the last user message by working backwards through messages
+        let lastUserMessageIndex = -1
+        for (let i = messages.value.length - 1; i >= 0; i--) {
+          if (messages.value[i].isUser) {
+            lastUserMessageIndex = i
+            break
+          }
+        }
+
+        if (
+          lastUserMessageIndex >= 0 &&
+          chatMessages.length > lastUserMessageIndex
+        ) {
+          const lastUserMessage = chatMessages[lastUserMessageIndex]
+          lastUserMessage.scrollIntoView({
             behavior: 'smooth',
             block: 'start',
             inline: 'nearest'
           })
         } else {
-          // Fallback to bottom if no messages found
+          // Fallback to bottom if no user messages found
           messagesContainer.value.scrollTop =
             messagesContainer.value.scrollHeight
         }

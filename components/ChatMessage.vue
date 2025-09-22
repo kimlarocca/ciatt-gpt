@@ -11,9 +11,10 @@
     <!-- Message Content -->
     <div class="flex-grow min-w-0">
       <div class="prose prose-invert max-w-none">
-        <p class="text-gray-100 whitespace-pre-wrap break-words mb-0">
-          {{ message.content }}
-        </p>
+        <p
+          class="text-gray-100 whitespace-pre-wrap break-words mb-0"
+          v-html="message.content"
+        />
       </div>
 
       <!-- Timestamp -->
