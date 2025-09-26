@@ -31,7 +31,7 @@ img {
 a {
     color: var(--link-color);
     border-bottom: 1px solid transparent;
-    text-decoration: none;
+    text-decoration: underline;
     transition:
         outline-color 0.2s,
         border-color 0.2s;
@@ -41,7 +41,7 @@ a {
 
     &:hover {
         color: var(--link-hover-color);
-        border-bottom-color: var(--link-hover-color);
+        // border-bottom-color: var(--link-hover-color);
     }
 
     /* disable text selection */

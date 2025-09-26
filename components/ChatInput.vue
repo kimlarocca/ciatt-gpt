@@ -14,7 +14,7 @@
 
       <!-- Footer text -->
       <p class="text-xs text-gray-500 text-center mt-2">
-        This website was not requested or authorized by any candidate or
+        This parody website was not requested or authorized by any candidate or
         candidate's committee. Paid for by
         <a target="_blank" href="https://www.papnj.com">People Are People LLC</a
         >, 971 US Highway 202N #8014, Branchburg, NJ 08876.
