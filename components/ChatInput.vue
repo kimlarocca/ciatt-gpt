@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, nextTick, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 
 interface Emits {
   (e: 'send', message: string): void
@@ -41,7 +41,6 @@ const props = withDefaults(defineProps<Props>(), {
 const emit = defineEmits<Emits>()
 
 const inputText = ref('')
-const textareaRef = ref<HTMLTextAreaElement>()
 
 const canSend = computed(() => {
   return inputText.value.trim().length > 0 && !props.disabled
@@ -51,31 +50,8 @@ const sendMessage = () => {
   if (canSend.value) {
     emit('send', inputText.value.trim())
     inputText.value = ''
-    adjustHeight()
   }
 }
-
-const handleKeydown = (event: KeyboardEvent) => {
-  if (event.key === 'Enter' && !event.shiftKey) {
-    event.preventDefault()
-    sendMessage()
-  }
-}
-
-const adjustHeight = () => {
-  nextTick(() => {
-    if (textareaRef.value) {
-      textareaRef.value.style.height = 'auto'
-      textareaRef.value.style.height =
-        Math.min(textareaRef.value.scrollHeight, 200) + 'px'
-    }
-  })
-}
-
-// Focus input when component mounts
-onMounted(() => {
-  textareaRef.value?.focus()
-})
 </script>
 
 <style lang="scss" scoped>
@@ -94,5 +70,19 @@ onMounted(() => {
   border-bottom-right-radius: var(--border-radius) !important;
   padding-left: 1.5rem !important;
   padding-right: 1.75rem !important;
+}
+
+/* Ensure the input container stays above keyboard on mobile */
+@supports (height: 100dvh) {
+  .fixed {
+    /* Use dynamic viewport height when available */
+    bottom: env(keyboard-inset-height, 0px);
+  }
+}
+
+/* Smooth transitions for keyboard animations */
+.transition-all {
+  transition-property: bottom, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 </style>
