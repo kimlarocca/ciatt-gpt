@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Ciatt GPT  | always checks what Donald Trump says before making any statements', // default fallback title
+      title: 'CiattGPT | Ask "Jack" Anything', // default fallback title
       htmlAttrs: {
         lang: 'en',
       },
